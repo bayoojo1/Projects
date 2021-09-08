@@ -1,0 +1,119 @@
+npm Package Examples
+   
+    Express http://expressjs.com/
+    Passport http://passportjs.org/
+    jQuery Plugins https://www.npmjs.com/browse/keyword/jquery-plugin
+        tipso https://www.npmjs.com/package/tipso
+    Grunt http://gruntjs.com/
+    gulp.js http://gulpjs.com/
+    CoffeeScript http://coffeescript.org/
+    TypeScript http://www.typescriptlang.org/
+    Sass http://sass-lang.com/
+    Cordova http://cordova.apache.org/
+    PhoneGap http://phonegap.com/
+    Ionic http://ionicframework.com/
+    johnny-five http://johnny-five.io/
+    Espruino http://www.espruino.com/
+    Tessel https://tessel.io/
+
+
+Issues installing bcrypt?
+
+If you are getting errors in the console while installing bcrypt, run npm install bcryptjs instead. Then require bcryptjs in app.js. For example:
+
+var unsecurePlainTextPassword = "password";
+var bcrypt = require('bcryptjs');
+
+bcrypt.genSalt(10, function(err, salt) {
+  bcrypt.hash(unsecurePlainTextPassword, salt, function(err, hash) {
+    console.log(hash);
+  });
+});
+
+
+
+
+npm Command Line Usage
+
+    Get help for a command
+        npm <command> -h
+        e.g. npm init -h
+
+    Initializing a package.json file
+        npm init
+        npm help json for what each of the fields in the package.json does
+
+    Installing an npm Package as a dependency
+        npm install colors --save
+
+    Installing an npm Package as a development dependency
+        npm install mocha --save-dev
+
+    Install all packages specified in your package.json
+        npm install <flags>
+        e.g. npm install
+        e.g. npm install --python=python2
+
+    Running npm in a production environment
+        NODE_ENV=production npm install
+
+Git Usage
+
+To ignore files create a .gitignore and add the files and folders you want to ignore.
+
+Example .gitignore file:
+
+node_modules/
+.DS_Store
+config/database.yml
+
+
+
+
+
+Semantic Versioning
+
+    MAJOR.MINOR.PATCH
+    ^ before a version number means install up to the latest MINOR release.
+        e.g. ^1.1 can install 1.3 if available but not 2.0
+    ~ before a version number means install up to the latest PATCH release.
+        e.g. ~2.0.1 can install 2.0.9 if available but not 2.1.0
+
+Terminal Commands
+
+    Clear the screen
+        clear
+
+npm Command Line Usage
+
+    See list of commands
+        npm
+
+    Installing a packages from package.json
+        npm install
+
+    Check for outdated packages
+        npm outdated
+
+    Update packages in your project
+        For local packages npm update
+        For global packages npm update <package name> -g
+            e.g. npm update http-server -g
+
+
+
+
+
+Uninstalling packages
+
+    Uninstall a local dependency: npm uninstall <package name>
+        e.g. npm uninstall colors
+    Uninstall a local dependency and remove from package.json: npm uninstall <package name> --save
+        e.g. npm uninstall colors --save
+    Uninstall a local development dependency and remove from package.json: npm uninstall <package name> --save-dev
+        e.g. npm uninstall mocha --save-dev
+    Uninstall a global dependency: npm uninstall <package name> -g
+        e.g. npm uninstall http-server -g
+
+
+You can use npm as task runner: https://docs.npmjs.com/cli/v7/using-npm/scripts
