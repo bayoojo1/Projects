@@ -1,0 +1,37 @@
+const express = require('express');
+const router = express.Router();
+
+
+router.get('/', (req, res) => {
+    //res.send('<h1>Hello Bayo</h1>');
+    const name = req.cookies.username;
+    if (name) {
+        res.render('index', { name });
+    } else {
+        res.redirect('/hello');
+    } 
+});
+
+router.get('/hello', (req, res) => {
+    const name = req.cookies.username;
+    if (name) {
+        res.redirect('/');
+    } else {
+        res.render('hello');
+    } 
+});
+
+router.post('/hello', (req, res) => {
+    res.cookie('username', req.body.username);
+    //res.render('hello', { name: req.body.username });
+    res.redirect('/');
+    //console.log(req.body);
+});
+
+router.post('/goodbye', (req, res) => {
+    res.clearCookie('username');
+    res.redirect('/hello');
+});
+
+// Export the index.js content to be used by other app where it's called.
+module.exports = router;

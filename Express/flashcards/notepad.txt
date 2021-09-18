@@ -1,0 +1,11 @@
+HOW TO INSTALL EXPRESS
+
+$ npm init -y 
+
+$ npm install express@4.15.2 --save
+
+To keep a nodeJS application running without having to do a restart everytime a change is made, install the nodemon module like so 
+$ npm install -g nodemon 
+To use it, make sure the package.json file has the "main" field pointing to your app, e.g 
+"main": "app.js"
+To run it, type nodemon at the command line while in your project directory
