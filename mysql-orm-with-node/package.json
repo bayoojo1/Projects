@@ -1,0 +1,16 @@
+{
+  "name": "mysql-orm-with-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^2.3.0",
+    "sequelize": "^5.10.1"
+  }
+}
