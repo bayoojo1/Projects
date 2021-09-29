@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  div.subheader
+    h2 Users  
+  each user in users
+    user
+      h3= user.username
