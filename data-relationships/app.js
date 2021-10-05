@@ -67,12 +67,17 @@ console.log('Testing the connection to the database...');
         directorPersonId: bradBird.id,
       }),
       Movie.create({
-        title: 'The Incredible',
-        releaseYear: 2004,
-        directorPersonId: bradBird.id,
+        title:'The Incredible',
+        releaseYear:2004,
+        directorPersonId:bradBird.id,
       }),
     ]);
     console.log(JSON.stringify(movieInstances, null, 2));
+
+    // Update the global variables for the movie instances
+    [theIronGiant, theIncredibles] = movieInstances;
+    console.log('listing details of movie - the Incredibles');
+    console.log(JSON.stringify(theIncredibles, null, 2));
 
     // Retrieve movies
     const movies = await Movie.findAll({

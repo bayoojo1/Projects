@@ -1,0 +1,28 @@
+
+Instruction
+Using Create React App
+Why Create React App?
+
+In React Basics, you started to build the scoreboard app using the CDN links to help you focus on learning React, without having to worry about installing and running any tools.
+
+The CDN-based approach is not useful in a production environment as soon as you start using JSX. For instance, we used Babel directly in the browser to transpile JSX into JavaScript. The Babel script is ~800KB in size, which for most use cases, is too large of a download to be practical. Also, there's the overhead in the browser of transpiling JSX into JavaScript.
+
+Developers use compiling as part of a build process to avoid the overhead of downloading Babel and multiple JavaScript files to the client. Create React App sets up a modern build system for your React apps in little time, no need to install or configure tools like Webpack or Babel. The tools are already pre-configured in each new project, that way you can focus on building your app.
+
+To get started, install Create React App and create a new app, at all once, with npx. For example:
+
+npx create-react-app scoreboard
+cd scoreboard
+npm start
+
+The scoreboard app is already set up for you with Create React App. To get a head start, you can download the project files here.
+A closer look at the project files
+
+What's in package.json?
+When you create a project with Create React App, it installs the latest version of React and React-DOM, as well as the latest version of react-scripts, a development dependency that manages all other dev dependencies that run, test and build your app.
+
+Progressive Web App Features
+Create React App sets up a fully functional, offline-first Progressive Web App by default. However, we removed the PWA related files just for this project to focus on the React components only.
+Dive deeper into Create React App
+
+To learn more, check out the Create React App docs, or watch the Treehouse workshop Using Create App.
